@@ -1,10 +1,9 @@
 # flutter_movies
 
-A new Flutter project.
+UI Challenge - Movies App
 
-## Getting Started
+https://github.com/mbcorona/flutter_movies/assets/14170258/5d849121-97e3-41d8-86ae-3974a1f1215e
 
-This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
