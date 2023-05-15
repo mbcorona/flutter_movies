@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies/models/movie_model.dart';
+import 'package:flutter_movies/pages/book_ticket/book_ticket_page.dart';
+import 'package:flutter_movies/pages/ticket/ticket_page.dart';
 import 'package:flutter_movies/widgets/app_chip.dart';
 import 'package:flutter_movies/widgets/glass_icon_button.dart';
 import 'package:flutter_movies/widgets/scaleup_animation.dart';
@@ -90,7 +92,7 @@ class MoviePage extends StatelessWidget {
                         TranslateUpAnimation(
                           duration: const Duration(milliseconds: 2400),
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () => _bookTicket(context),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
                               shape: RoundedRectangleBorder(
@@ -113,10 +115,48 @@ class MoviePage extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
+  }
+
+  void _bookTicket(BuildContext context) {
+    Navigator.of(context)
+        .push(
+      PageRouteBuilder(
+        transitionDuration: const Duration(milliseconds: 1800),
+        reverseTransitionDuration: const Duration(milliseconds: 700),
+        pageBuilder: (context, animation, _) {
+          const begin = Offset(0, 1);
+          const end = Offset.zero;
+          const curve = Curves.fastEaseInToSlowEaseOut;
+
+          var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+          return SlideTransition(
+            position: animation.drive(tween),
+            child: BookTicketPage(movie: movie),
+          );
+        },
+      ),
+    )
+        .then((value) async {
+      if (value) {
+        await Future.delayed(const Duration(milliseconds: 500));
+        // ignore: use_build_context_synchronously
+        Navigator.pushReplacement(
+          context,
+          PageRouteBuilder(
+            pageBuilder: ((context, animation, secondaryAnimation) => FadeTransition(
+                  opacity: animation,
+                  child: TicketPage(
+                    movie: movie,
+                  ),
+                )),
+          ),
+        );
+      }
+    });
   }
 
   Row _getMovieChips() {

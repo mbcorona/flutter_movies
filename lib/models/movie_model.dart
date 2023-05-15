@@ -34,6 +34,10 @@ final movies = [
     image: 'https://images.static-bluray.com/products/20/134733_1_large.jpg',
   ),
   Movie(
+    name: 'John Wick 4',
+    image: 'https://image.tmdb.org/t/p/w500//vLuWnBnCRTU8WxihMGkebcbu5f.jpg',
+  ),
+  Movie(
     name: 'Black Panther',
     image: 'https://wallpaperaccess.com/full/96632.jpg',
   ),
@@ -44,6 +48,11 @@ final movies = [
   Movie(
     name: 'Turning red',
     image: 'https://i.pinimg.com/originals/4b/fd/1e/4bfd1e6e2a0fc4a557ddcea4fba07207.jpg',
+  ),
+  Movie(
+    name: 'Mario',
+    image:
+        'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbd5baf7-3bcb-4f2c-8dcc-1ce7e072f0ff/dfesla4-f7534f9d-c295-472b-94f1-cf68955cb080.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NiZDViYWY3LTNiY2ItNGYyYy04ZGNjLTFjZTdlMDcyZjBmZlwvZGZlc2xhNC1mNzUzNGY5ZC1jMjk1LTQ3MmItOTRmMS1jZjY4OTU1Y2IwODAuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.CHpQirburPYQhQ3qOshAfGVANcaArx-fvPChr6LwXOs',
   ),
   Movie(
     name: 'Puss in boots',
