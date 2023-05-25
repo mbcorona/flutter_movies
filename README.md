@@ -2,6 +2,8 @@
 
 UI Challenge - Movies App
 
+Inspiration: https://dribbble.com/shots/20865566-Cinema-Mobile-IOS-App
+
 https://github.com/mbcorona/flutter_movies/assets/14170258/5d849121-97e3-41d8-86ae-3974a1f1215e
 
 
